@@ -18,10 +18,10 @@ import java.util.List;
 public class IndexController {
 
     private final AccountTestService accountTestService;
-    @GetMapping("/")
+    /*@GetMapping("/")
     public String hello(Model model){
         return "index";
-    }
+    }*/
 
     void pln(String str) {
         System.out.println(str);
