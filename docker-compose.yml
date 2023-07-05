@@ -1,0 +1,28 @@
+version: "2.18.1"
+
+services:
+    web:
+        build:
+            context: /Users/hwaniee/react_workspace/react_test
+            dockerfile: Dockerfile
+        image: demo-front:latest
+        container_name: demo_front
+        ports:
+            - "3000:80"
+        environment:
+            - REACT_APP_API_URL=http://192.168.1.14
+            - REACT_APP_API_PORT=8080
+    api:
+        build:
+            context: /Users/hwaniee/spring_workspace/demo
+            dockerfile: Dockerfile
+        image: demo-api:latest
+        container_name: demo-api
+        ports:
+            - "8080:8080"
+        environment:
+            - spring.datasource.url=jdbc:postgresql://192.168.1.14/testdb
+            - spring.datasource.username=testuser
+            - spring.datasource.password=1234
+  
+
