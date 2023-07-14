@@ -6,7 +6,7 @@ services:
             context: /Users/hwaniee/react_workspace/react_test
             dockerfile: Dockerfile
         image: demo-front:latest
-        container_name: demo_front
+        container_name: demo-front
         ports:
             - "3000:80"
         environment:
